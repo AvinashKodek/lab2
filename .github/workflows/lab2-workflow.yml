@@ -9,6 +9,9 @@ on:
         description: "Enter a custom message"
         type: string
         required: true
+        
+env:       
+  DEBUG: "true"
 
 jobs:
   job1:
@@ -24,4 +27,5 @@ jobs:
       - name: Printing run-job boolean value 
         if: ${{ inputs.run-job == 'true' }} 
         run: echo ${{ inputs.run-job }}      
+
 
